@@ -24,6 +24,6 @@ export function TwoTool() {
     );
 
     return (
-        <div className={styles.toolContainer} ref={target}>Two</div>
+        <div className={styles.twoToolContainer} ref={target}>Two</div>
     );
 }

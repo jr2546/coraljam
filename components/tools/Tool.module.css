@@ -1,6 +1,17 @@
-.toolContainer {
-    padding: 20px;
-    background-color: red;
-    color: white;
+.oneToolContainer {
+    padding: 16px;
+    background-color: #ffffa5;
+    color: black;
+    position: absolute;
+}
+
+.twoToolContainer {
+    padding: 16px;
+    background-color: #ffffa5;
+    color: black;
+    position: absolute;
+}
+
+.threeToolContainer {
     position: absolute;
 }

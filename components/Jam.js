@@ -1,3 +1,4 @@
+import { useStage } from "react-drawable-overlay";
 import {
     useThings2,
 } from '../hooks';
@@ -5,9 +6,10 @@ import * as Tools from './tools';
 
 export function Jam() {
 
-    const { store } = useThings2();
-
     // debugger;
+
+    const { store } = useThings2();
+    const stage = useStage();
 
     const xx = store.box.toJSON();
 
@@ -21,6 +23,12 @@ export function Jam() {
 
     return (
         <>
+            <div
+                style={{ position: "relative", height: 500, width: 1000 }}
+                className="drawable-content"
+            >
+                {stage}
+            </div>
             {components.map((_, idx) => <_ key={idx} />)}
         </>
     );

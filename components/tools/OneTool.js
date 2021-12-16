@@ -25,9 +25,9 @@ export function OneTool() {
     );
 
     return (
-        <div className={styles.toolContainer} ref={target}>
+        <div className={styles.oneToolContainer} ref={target}>
             <div className="grow-wrap">
-                <TextareaAutosize />
+                <TextareaAutosize style={{ backgroundColor: '#ffffa5' }}/>
             </div>
         </div>
     );

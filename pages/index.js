@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { DrawableOverlay } from "react-drawable-overlay";
 import {
     Jam,
     Toolbox,
@@ -23,9 +24,11 @@ export default function Home() {
                 <div>Untitled</div>
                 <div>Zoom</div>
             </header>
-            <main className={styles.main}>
-                <Jam />
-            </main>
+            <DrawableOverlay initialInDrawMode defaultBrushColor="#000">
+                <main className={styles.main}>
+                    <Jam />
+                </main>
+            </DrawableOverlay>
             <footer className={styles.footer}>
                 <Toolbox />
             </footer>

@@ -1,4 +1,5 @@
 import useDraggable from '../../hooks/useDraggable';
+import TextareaAutosize from 'react-textarea-autosize';
 import styles from './Tool.module.css';
 
 export function ThreeTool() {
@@ -24,6 +25,8 @@ export function ThreeTool() {
     );
 
     return (
-        <div className={styles.toolContainer} ref={target}>Three</div>
+        <div className={styles.threeToolContainer} ref={target}>
+            <TextareaAutosize/>
+        </div>
     );
 }
