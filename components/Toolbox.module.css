@@ -1,0 +1,10 @@
+.toolboxContainer {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+}
+
+.toolContainer {
+    border: 1px solid black;
+    padding: 6px;
+}
