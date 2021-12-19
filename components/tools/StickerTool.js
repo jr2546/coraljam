@@ -1,29 +1,19 @@
-import useDraggable from '../../hooks/useDraggable';
+import {
+    Tool,
+} from './Tool';
 import styles from './Tool.module.css';
 
-export function StickerTool() {
-
-    function onStart() {
-        console.log('onStart');
-    }
-    function onMove() {
-        console.log('onMove');
-    }
-    function onEnd() {
-        console.log('onEnd');
-    }
-
-    const {
-        target,
-    } = useDraggable(
-        {
-            onStart,
-            onMove,
-            onEnd,
-        }
-    );
+export function StickerTool(
+    {
+        id,
+    },
+) {
 
     return (
-        <div className={styles.stickerToolContainer} ref={target}>Two</div>
+        <Tool id={id}>
+            <div className={styles.stickerToolContainer}>
+                Sticker
+            </div>
+        </Tool>
     );
 }

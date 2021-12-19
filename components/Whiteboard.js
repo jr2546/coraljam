@@ -1,3 +1,4 @@
+import React from 'react';
 import {
     useStage,
 } from 'react-drawable-overlay';
@@ -8,22 +9,10 @@ import * as Tools from './tools';
 
 export function Whiteboard() {
 
-    debugger;
-
     const { _store } = useWhiteboard();
     const stage = useStage();
 
     const objs = _store.objects.toJSON();
-
-    const components = objs.reduce(
-        (accum, { id, name, position }) => {
-            const c = Tools[name];
-            debugger;
-            accum.push(Tools[name]);
-            return accum;
-        },
-        [],
-    );
 
     return (
         <>
@@ -34,8 +23,13 @@ export function Whiteboard() {
                 {stage}
             </div>
             {
-                components.map(
-                    (Component, idx) => <Component key={idx} />
+                objs.map(
+                    ({ id, name, position }) => {
+                        const Component = Tools[name];
+                        return (
+                            <Component key={id} id={id} />
+                        );
+                    }
                 )
             }
         </>

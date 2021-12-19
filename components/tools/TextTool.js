@@ -1,32 +1,22 @@
-import useDraggable from '../../hooks/useDraggable';
+import {
+    useSyncedDraggable,
+} from '../../hooks';
 import TextareaAutosize from 'react-textarea-autosize';
 import styles from './Tool.module.css';
 
-export function TextTool() {
-
-    function onStart() {
-        console.log('onStart');
-    }
-    function onMove() {
-        console.log('onMove');
-    }
-    function onEnd() {
-        console.log('onEnd');
-    }
+export function TextTool(
+    {
+        id,
+    },
+) {
 
     const {
         target,
-    } = useDraggable(
-        {
-            onStart,
-            onMove,
-            onEnd,
-        }
-    );
+g    } = useSyncedDraggable(id);
 
     return (
         <div className={styles.textToolContainer} ref={target}>
-            <TextareaAutosize/>
+            <TextareaAutosize />
         </div>
     );
 }

@@ -1,5 +1,6 @@
 import {
     ConfigurationProvider,
+    LoggerProvider,
 } from '../hooks';
 import {
     tools,
@@ -29,7 +30,9 @@ function MyApp({ Component, pageProps }) {
     return (
         <SafeHydrate>
             <ConfigurationProvider value={configuration}>
-                <Component {...pageProps} />
+                <LoggerProvider>
+                    <Component {...pageProps} />
+                </LoggerProvider>
             </ConfigurationProvider>
         </SafeHydrate>
     );

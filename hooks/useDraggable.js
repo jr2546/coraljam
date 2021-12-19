@@ -25,7 +25,8 @@ const defaultOptions = {
     onMove: function () { },
     onEnd: function () { },
 };
-const useDraggable = (options) => {
+
+export const useDraggable = (options) => {
     const opts = useMemo(() => {
         return {
             ...defaultOptions,
@@ -158,4 +159,3 @@ const useDraggable = (options) => {
     }, [target, opts, handleStart, handleMove, handleEnd]);
     return { target, position, setPosition: setTransform };
 };
-export default useDraggable;
