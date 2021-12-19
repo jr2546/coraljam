@@ -1,17 +1,17 @@
-.oneToolContainer {
+.noteToolContainer {
     padding: 16px;
     background-color: #ffffa5;
     color: black;
     position: absolute;
 }
 
-.twoToolContainer {
+.stickerToolContainer {
     padding: 16px;
     background-color: #ffffa5;
     color: black;
     position: absolute;
 }
 
-.threeToolContainer {
+.textToolContainer {
     position: absolute;
 }

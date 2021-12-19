@@ -1,3 +1,3 @@
-export { OneTool } from './OneTool';
-export { TwoTool } from './TwoTool';
-export { ThreeTool } from './ThreeTool';
+export { NoteTool } from './NoteTool';
+export { StickerTool } from './StickerTool';
+export { TextTool } from './TextTool';

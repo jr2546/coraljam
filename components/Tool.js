@@ -1,25 +1,25 @@
 import {
-    useThings2,
+    useWhiteboard,
 } from '../hooks'
-import styles from './Toolbox.module.css';
+import styles from './Tool.module.css';
 
 export function Tool(
     {
         label,
+        icon,
         component,
     },
 ) {
 
-    const { store } = useThings2();
+    const whiteboard = useWhiteboard();
 
     const handleClick = () => {
-        // debugger;
-        store.box.push(component);
+        whiteboard.add(component);
     };
 
     return (
         <div className={styles.toolContainer} onClick={handleClick}>
-            {label}
+            {label} {icon}
         </div>
     );
 }

@@ -1,5 +1,6 @@
 import Head from 'next/head';
 import Image from 'next/image';
+import { useRouter } from 'next/router';
 import { DrawableOverlay } from "react-drawable-overlay";
 import {
     Jam,
@@ -9,7 +10,12 @@ import styles from '../styles/Home.module.css';
 
 export default function Home() {
 
-    // debugger;
+    const router = useRouter();
+
+    const handleClickEnter = (e) => {
+        e.preventDefault();
+        router.push('/CoralJam');
+    };
 
     return (
         <div className={styles.container}>
@@ -19,19 +25,12 @@ export default function Home() {
                 <link rel="icon" href="/favicon.ico" />
             </Head>
 
-            <header className={styles.header}>
-                <div>CoralJam</div>
-                <div>Untitled</div>
-                <div>Zoom</div>
-            </header>
-            <DrawableOverlay initialInDrawMode defaultBrushColor="#000">
-                <main className={styles.main}>
-                    <Jam />
-                </main>
-            </DrawableOverlay>
-            <footer className={styles.footer}>
-                <Toolbox />
-            </footer>
+            <main className={styles.main}>
+                <h1>CoralJam</h1>
+                <input type="text" name="Name" />
+                <input type="text" name="Room" />
+                <button onClick={handleClickEnter}>Enter</button>
+            </main>
         </div>
-    )
+    );
 }

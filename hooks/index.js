@@ -1,4 +1,4 @@
 export * from './Configuration';
-export * from './ThingContext';
+export * from './WhiteboardContext';
 export * from './useSyncedStore';
 export * from './useWebRtc';

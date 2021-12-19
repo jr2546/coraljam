@@ -1,26 +1,11 @@
 import {
     ConfigurationProvider,
-    ThingsProvider2,
 } from '../hooks';
 import {
+    tools,
     defaultRoom,
 } from '../constants';
 import '../styles/globals.css'
-
-const tools = [
-    {
-        label: 'One',
-        component: 'OneTool',
-    },
-    {
-        label: 'Two',
-        component: 'TwoTool',
-    },
-    {
-        label: 'Three',
-        component: 'ThreeTool',
-    },
-];
 
 const configuration = {
     defaultRoom,
@@ -44,9 +29,7 @@ function MyApp({ Component, pageProps }) {
     return (
         <SafeHydrate>
             <ConfigurationProvider value={configuration}>
-                <ThingsProvider2>
-                    <Component {...pageProps} />
-                </ThingsProvider2>
+                <Component {...pageProps} />
             </ConfigurationProvider>
         </SafeHydrate>
     );

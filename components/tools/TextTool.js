@@ -2,7 +2,7 @@ import useDraggable from '../../hooks/useDraggable';
 import TextareaAutosize from 'react-textarea-autosize';
 import styles from './Tool.module.css';
 
-export function OneTool() {
+export function TextTool() {
 
     function onStart() {
         console.log('onStart');
@@ -25,10 +25,8 @@ export function OneTool() {
     );
 
     return (
-        <div className={styles.oneToolContainer} ref={target}>
-            <div className="grow-wrap">
-                <TextareaAutosize style={{ backgroundColor: '#ffffa5' }}/>
-            </div>
+        <div className={styles.textToolContainer} ref={target}>
+            <TextareaAutosize/>
         </div>
     );
 }

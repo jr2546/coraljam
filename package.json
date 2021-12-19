@@ -15,12 +15,14 @@
     "react": "17.0.2",
     "react-dom": "17.0.2",
     "react-drawable-overlay": "^2.2.2",
+    "react-icons": "^4.3.1",
     "react-textarea-autosize": "^8.3.3",
     "y-webrtc": "^10.2.2",
     "yarn": "^1.22.17",
     "yjs": "^13.5.23"
   },
   "devDependencies": {
+    "@welldone-software/why-did-you-render": "^6.2.3",
     "eslint": "8.4.1",
     "eslint-config-next": "12.0.7"
   }

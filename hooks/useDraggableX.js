@@ -1,7 +1,6 @@
-import useDraggable from '../../hooks/useDraggable';
-import styles from './Tool.module.css';
+import useDraggable from './useDraggable';
 
-export function TwoTool() {
+export const useDraggableX = () => {
 
     function onStart() {
         console.log('onStart');
@@ -13,9 +12,7 @@ export function TwoTool() {
         console.log('onEnd');
     }
 
-    const {
-        target,
-    } = useDraggable(
+    return useDraggable(
         {
             onStart,
             onMove,
@@ -23,7 +20,4 @@ export function TwoTool() {
         }
     );
 
-    return (
-        <div className={styles.twoToolContainer} ref={target}>Two</div>
-    );
 }
