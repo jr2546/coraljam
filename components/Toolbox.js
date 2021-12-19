@@ -1,6 +1,6 @@
 import {
     useConfiguration,
-    useThings2,
+    useWhiteboard,
 } from '../hooks'
 import {
     Tool,
@@ -11,8 +11,19 @@ export function Toolbox() {
 
     const { tools } = useConfiguration();
 
+    const whiteboard = useWhiteboard();
+
+    const handleClick = (component) => {
+        whiteboard.add(component);
+    };
+
     const toolIcons = tools.map(
-        (toolProps, idx) => <Tool key={idx} {...toolProps} />
+        (toolProps, idx) => {
+            const { label, icon, component } = toolProps;
+            return (
+                <Tool key={idx} {...toolProps} label={label} icon={icon} onClick={() => handleClick(component)}/>
+            );
+        }
     );
 
     return (

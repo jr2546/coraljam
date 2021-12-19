@@ -1,4 +1,3 @@
-import { useState } from 'react';
 import {
     Tool,
 } from './Tool';
@@ -16,9 +15,7 @@ export function NoteTool(
     return (
         <Tool id={id}>
             <div className={styles.noteToolContainer}>
-                <div className="grow-wrap">
-                    <Textarea className={styles.noteTextArea} />
-                </div>
+                <Textarea className={styles.noteTextArea} />
             </div>
         </Tool>
     );

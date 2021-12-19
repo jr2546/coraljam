@@ -14,6 +14,8 @@ export function Textarea(
     };
 
     return (
-        <TextareaAutosize {...props}  value={text} onChange={handleChange} />
+        <div className="grow-wrap">
+            <TextareaAutosize {...props}  value={text} onChange={handleChange} />
+        </div>
     );
 }

@@ -1,24 +1,15 @@
-import {
-    useWhiteboard,
-} from '../hooks'
 import styles from './Tool.module.css';
 
 export function Tool(
     {
         label,
         icon,
-        component,
+        onClick,
     },
 ) {
 
-    const whiteboard = useWhiteboard();
-
-    const handleClick = () => {
-        whiteboard.add(component);
-    };
-
     return (
-        <div className={styles.toolContainer} onClick={handleClick}>
+        <div className={styles.toolContainer} onClick={onClick}>
             {label} {icon}
         </div>
     );
