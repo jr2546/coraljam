@@ -7,7 +7,8 @@ import {
     useConfiguration,
     useSyncedStore,
     useWebRtc,
-} from './index';
+    useUser,
+} from './';
 import {
     getYjsValue,
 } from "@syncedstore/core";
@@ -22,7 +23,12 @@ export function WhiteboardProvider(
     },
 ) {
 
-    const { defaultRoom } = useConfiguration();
+    const {
+        defaultRoom,
+    } = useConfiguration();
+    const {
+        user,
+    } = useUser();
     const store = useSyncedStore();
     const provider = useWebRtc(defaultRoom, getYjsValue(store));
 
@@ -35,6 +41,7 @@ export function WhiteboardProvider(
                     id: idx++,
                     name,
                     position: [],
+                    creator: user,
                 }
             );
         },

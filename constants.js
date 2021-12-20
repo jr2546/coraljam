@@ -1,13 +1,16 @@
 import {
     FaBeer,
 } from 'react-icons/fa';
+import {
+    FcApproval,
+} from 'react-icons/fc';
 
 export const defaultRoom = 'coraljam';
 
 export const tools = [
     {
         label: 'Note',
-        icon: <FaBeer />,
+        icon: <FcApproval />,
         component: 'NoteTool',
     },
     {

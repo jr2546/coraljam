@@ -1,7 +1,7 @@
 .container {
     display: flex;
     flex-direction: column;
-    background-color: rgb(34 40 108);
+    background-color: #eeeeee;
 }
 
 .main {
@@ -13,10 +13,31 @@
     align-items: center;
 }
 
-.main > * + * {
-	margin-top: 1.5em;
+.main > h1 {
+    text-transform: uppercase;
+    font-size: 36px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }
 
-.main > input[type=text] {
+.inputs {
+    display: flex;
+    flex-direction: row;
+}
+
+.input {
+    margin: 4px;
+}
+
+.label {
+    text-transform: uppercase;
+}
+
+.main > * + * {
+	margin-top: 8px;
+}
+
+.main input[type=text] {
+    padding: 4px;
     border: 0px;
 }

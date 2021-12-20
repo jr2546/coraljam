@@ -4,7 +4,22 @@ import {
 import {
     Textarea,
 } from '../';
-import styles from './Tool.module.css';
+import {
+    useSyncedValue,
+} from '../../hooks';
+import styles from './NoteTool.module.css';
+
+export function Creator(
+) {
+
+    const [creator] = useSyncedValue('creator');
+
+    return (
+        <div className={styles.creator}>
+            {creator}
+        </div>
+    );
+}
 
 export function NoteTool(
     {
@@ -14,8 +29,9 @@ export function NoteTool(
 
     return (
         <Tool id={id}>
-            <div className={styles.noteToolContainer}>
-                <Textarea className={styles.noteTextArea} />
+            <div className={styles.container}>
+                <Textarea className={styles.textArea} />
+                <Creator />
             </div>
         </Tool>
     );

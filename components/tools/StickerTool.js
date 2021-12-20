@@ -1,6 +1,9 @@
 import {
     Tool,
 } from './Tool';
+import {
+    FcApproval,
+} from 'react-icons/fc';
 import styles from './Tool.module.css';
 
 export function StickerTool(
@@ -11,9 +14,7 @@ export function StickerTool(
 
     return (
         <Tool id={id}>
-            <div className={styles.stickerToolContainer}>
-                Sticker
-            </div>
+            <FcApproval size="3.5rem" />
         </Tool>
     );
 }

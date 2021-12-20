@@ -38,9 +38,20 @@
     z-index: 8;
 }
 
-.footer a {
+.app {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-grow: 1;
+    flex-direction: row;
+}
+
+.logo {
+    top: -2px;
+    position: relative;
+    margin-right: 4px;
+}
+
+.name {
+    text-transform: uppercase;
+    font-size: 16px;
+    font-weight: bold;
+    letter-spacing: 2px;
 }

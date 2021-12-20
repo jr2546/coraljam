@@ -1,6 +1,7 @@
 import {
     ConfigurationProvider,
     LoggerProvider,
+    UserProvider,
 } from '../hooks';
 import {
     tools,
@@ -14,9 +15,10 @@ const configuration = {
     providers: new Map(),
 };
 
-function SafeHydrate({
-    children,
-},
+function SafeHydrate(
+    {
+        children,
+    },
 ) {
     return (
         <div suppressHydrationWarning>
@@ -25,13 +27,20 @@ function SafeHydrate({
     )
 }
 
-function MyApp({ Component, pageProps }) {
+function MyApp(
+    {
+        Component,
+        pageProps,
+    },
+) {
 
     return (
         <SafeHydrate>
             <ConfigurationProvider value={configuration}>
                 <LoggerProvider>
-                    <Component {...pageProps} />
+                    <UserProvider>
+                        <Component {...pageProps} />
+                    </UserProvider>
                 </LoggerProvider>
             </ConfigurationProvider>
         </SafeHydrate>

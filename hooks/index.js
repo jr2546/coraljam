@@ -1,6 +1,7 @@
 export * from './Configuration';
 export * from './LoggerContext';
 export * from './SyncContext';
+export * from './UserContext';
 export * from './WhiteboardContext';
 export * from './useDraggable';
 export * from './useSyncedDraggable';
