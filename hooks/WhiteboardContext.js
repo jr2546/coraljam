@@ -35,12 +35,13 @@ export function WhiteboardProvider(
     const value = {
         _store: store,
         _provider: provider,
-        add: (name) => {
+        add: (name, meta = {}) => {
             store.objects.push(
                 {
                     id: idx++,
                     name,
                     position: [],
+                    meta,
                     creator: user,
                 }
             );

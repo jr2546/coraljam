@@ -8,6 +8,7 @@ import {
     Draggable,
 } from '../Draggable';
 import OutsideClickHandler from 'react-outside-click-handler';
+import styles from './Tool.module.css';
 
 export function Focusable(
     {
@@ -18,14 +19,21 @@ export function Focusable(
     const {
         id,
     } = useSyncContext();
+    const [ focused, setFocused ] = useSyncedValue('focused');
+
+    const handleClick = () => {
+        setFocused(true);
+    };
 
     const handleOutsideClick = () => {
-        console.log('You clicked outside of this component', id);
+        setFocused(false);
     };
 
     return (
         <OutsideClickHandler onOutsideClick={handleOutsideClick}>
-            {children}
+            <div className={focused ? styles.focused : null} onClick={handleClick}>
+                {children}
+            </div>
         </OutsideClickHandler>
     );
 }

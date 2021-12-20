@@ -1,20 +1,21 @@
-import React, {
-    useContext,
-} from 'react';
 import {
     useConfiguration,
-    useThings2,
 } from './index';
 
-export const useProviders = () => {
+export const useProviders = (
+) => {
 
-    const { providers } = useConfiguration();
+    const {
+        providers,
+    } = useConfiguration();
 
-    if (providers !== null) {
-        return providers;
+    if (providers === null) {
+        throw new Error(
+            'Could not retrieve a set of providers. Please wrap in a ConfigurationProvider.'
+        );
     }
 
-    throw new Error(
-        'Could not retrieve a set of providers. Please wrap in a DocumentProvider.'
-    );
+    return {
+        providers,
+    };
 };

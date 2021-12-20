@@ -60,7 +60,7 @@ export const useDraggable = (options) => {
     const handleStart = useCallback((e) => {
         const [prevX, prevY] = prevPosition.current;
         let [x, y] = prevPosition.current;
-        if (e instanceof window.TouchEvent && opts.touch) {
+        if (0 /*e instanceof window.TouchEvent && opts.touch */) {
             dragging.current = true;
             x = e.touches[0].clientX - prevX;
             y = e.touches[0].clientY - prevY;
@@ -85,7 +85,7 @@ export const useDraggable = (options) => {
         }
         const [startX, startY] = startXY.current;
         let [x, y] = prevPosition.current;
-        if (e instanceof window.TouchEvent && opts.touch) {
+        if (0 /* e instanceof window.TouchEvent && opts.touch */) {
             x = e.touches[0].clientX - startX;
             y = e.touches[0].clientY - startY;
         }
@@ -119,7 +119,7 @@ export const useDraggable = (options) => {
         setTransform([x, y]);
     }, [dragging, opts, setTransform]);
     const handleEnd = useCallback((e) => {
-        if ((e instanceof window.TouchEvent && opts.touch) ||
+        if ((0 /* e instanceof window.TouchEvent && opts.touch */) ||
             (e instanceof window.MouseEvent && e.button === 0 && opts.mouse)) {
             dragging.current = false;
             opts.onEnd(target, prevPosition.current, setTransform);

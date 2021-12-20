@@ -1,34 +1,41 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# CORALJAM
 
-## Getting Started
+## Introduction
 
-First, run the development server:
+CoralJam is a real-time collaborative whiteboarding application.
+
+### Local Installation
+
+These instructions will get you a copy of the project up and running on your local machine for development and testing purposes.
+
+#### Requirements
+
+- [Node.js](https://nodejs.org/en/)
+- [Yarn](https://yarnpkg.com/getting-started/install)
+- [Git](https://git-scm.com/downloads)
+
+#### Clone the repo
 
 ```bash
-npm run dev
-# or
-yarn dev
+git clone https://github.com/kmcclosk/coraljam.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+#### Install the dependencies
 
-You can start editing the page by modifying `pages/index.js`. The page auto-updates as you edit the file.
+```bash
+yarn
+```
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.js`.
+#### Start the application
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+```bash
+yarn start
+```
 
-## Learn More
+## How to Use
 
-To learn more about Next.js, take a look at the following resources:
+When you start the application using `yarn start` your browser will open to `http://localhost:3000`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The CoralJam starts with a welcome screen where you enter your username. After entering your username you are taken to the main whiteboard application. The whiteboarding application offers a set of tools: notes, stickers, and freeform text. Clicking a tool will place an instance of the tool onto the main whiteboard screen. You can interact with the tool by moving it around.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+To see the real-time collaboration features of the Coraljam application, launch a new tab in the same browser or another browser and also navigate to `http://localhost:3000`. Enter a different username and click Enter. Now, all users you are connected will be able to work together.

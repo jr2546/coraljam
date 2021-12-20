@@ -23,6 +23,10 @@ export default function CoralJam() {
         router.push('/');
     }
 
+    const handleAddToHistory = (obj) => {
+        debugger;
+    };
+
     return (
         <div className={styles.container}>
             <Head>
@@ -37,10 +41,10 @@ export default function CoralJam() {
                         <img className={styles.logo} src="/coralreef.svg" width={15} height={15} />
                         <div className={styles.name}>CoralJam</div>
                     </div>
-                    <div>Untitled</div>
-                    <div>{user}</div>
+                    <div className={styles.save}>Untitled</div>
+                    <div className={styles.user}>{user}</div>
                 </div>
-                <DrawableOverlay initialInDrawMode defaultBrushColor="#000">
+                <DrawableOverlay initialInDrawMode defaultBrushColor="#000" onAddToHistory={handleAddToHistory}>
                     <main className={styles.main}>
                         <Whiteboard />
                     </main>

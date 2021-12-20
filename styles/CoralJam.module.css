@@ -41,6 +41,7 @@
 .app {
     display: flex;
     flex-direction: row;
+    flex-basis: 100%;
 }
 
 .logo {
@@ -54,4 +55,14 @@
     font-size: 16px;
     font-weight: bold;
     letter-spacing: 2px;
+}
+
+.save {
+    flex-basis: 100%;
+    text-align: center;
+}
+
+.user {
+    flex-basis: 100%;
+    text-align: right;
 }

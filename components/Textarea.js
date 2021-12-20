@@ -14,6 +14,6 @@ export function Textarea(
     };
 
     return (
-        <TextareaAutosize {...props}  value={text} onChange={handleChange} spellcheck="false" placeholder="Add Text" />
+        <TextareaAutosize {...props}  value={text} onChange={handleChange} spellCheck="false" placeholder="Add Text" />
     );
 }

@@ -24,3 +24,25 @@ export const useSyncedValue = (
         },
     ];
 };
+
+export const useSyncedSelector = (
+    fn,
+) => {
+
+    const {
+        id,
+    } = useSyncContext();
+
+    const {
+        _store,
+    } = useWhiteboard();
+
+    const ref = fn(_store.objects[id]);
+
+    return [
+        ref,
+        (value) => {
+            ref = value;
+        },
+    ];
+};

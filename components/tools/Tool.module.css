@@ -5,4 +5,13 @@
 }
 
 .textToolContainer {
+    height: 24px;
+}
+
+.focused {
+    border: 1px solid blue;
+}
+
+.unfocused {
+    border: 1px solid blue;
 }

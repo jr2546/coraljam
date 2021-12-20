@@ -17,6 +17,17 @@ export const tools = [
         label: 'Sticker',
         icon: <FaBeer />,
         component: 'StickerTool',
+        meta: {
+            sticker: 'fcApproval',
+        },
+    },
+    {
+        label: 'Sticker',
+        icon: <FaBeer />,
+        component: 'StickerTool',
+        meta: {
+            sticker: 'fcHighPriority',
+        },
     },
     {
         label: 'Text',

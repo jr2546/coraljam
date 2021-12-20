@@ -13,15 +13,18 @@ export function Toolbox() {
 
     const whiteboard = useWhiteboard();
 
-    const handleClick = (component) => {
-        whiteboard.add(component);
+    const handleClick = (
+        component,
+        meta,
+    ) => {
+        whiteboard.add(component, meta);
     };
 
     const toolIcons = tools.map(
         (toolProps, idx) => {
-            const { label, icon, component } = toolProps;
+            const { label, icon, component, meta } = toolProps;
             return (
-                <Tool key={idx} {...toolProps} label={label} icon={icon} onClick={() => handleClick(component)}/>
+                <Tool key={idx} {...toolProps} label={label} icon={icon} onClick={() => handleClick(component, meta)}/>
             );
         }
     );

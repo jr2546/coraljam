@@ -4,6 +4,7 @@ export * from './SyncContext';
 export * from './UserContext';
 export * from './WhiteboardContext';
 export * from './useDraggable';
+export * from './useProviders';
 export * from './useSyncedDraggable';
 export * from './useSyncedStore';
 export * from './useSyncedValue';
