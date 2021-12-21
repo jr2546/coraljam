@@ -22,9 +22,9 @@ export function Toolbox() {
 
     const toolIcons = tools.map(
         (toolProps, idx) => {
-            const { label, icon, component, meta } = toolProps;
+            const { label, component, meta } = toolProps;
             return (
-                <Tool key={idx} {...toolProps} label={label} icon={icon} onClick={() => handleClick(component, meta)}/>
+                <Tool key={idx} {...toolProps} label={label} onClick={() => handleClick(component, meta)}/>
             );
         }
     );

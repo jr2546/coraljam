@@ -1,14 +1,9 @@
 import {
-    useUser,
-    SyncProvider,
     useSyncedValue,
     useSyncContext,
-} from '../../hooks';
-import {
-    Draggable,
-} from '../Draggable';
+} from '../hooks';
 import OutsideClickHandler from 'react-outside-click-handler';
-import styles from './Tool.module.css';
+import styles from './Focusable.module.css';
 
 export function Focusable(
     {
@@ -35,23 +30,5 @@ export function Focusable(
                 {children}
             </div>
         </OutsideClickHandler>
-    );
-}
-
-export function Tool(
-    {
-        id,
-        children,
-    },
-) {
-
-    return (
-        <SyncProvider id={id}>
-            <Draggable>
-                <Focusable>
-                    {children}
-                </Focusable>
-            </Draggable>
-        </SyncProvider>
     );
 }

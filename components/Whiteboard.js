@@ -5,7 +5,7 @@ import {
 import {
     useWhiteboard,
 } from '../hooks';
-import * as Tools from './tools';
+import * as Items from './items';
 
 export function Whiteboard() {
 
@@ -25,7 +25,8 @@ export function Whiteboard() {
             {
                 objs.map(
                     ({ id, name, position }) => {
-                        const Component = Tools[name];
+                        debugger;
+                        const Component = Items[name];
                         return (
                             <Component key={id} id={id} />
                         );

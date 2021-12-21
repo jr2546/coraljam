@@ -1,13 +1,13 @@
 import {
-    Tool,
-} from './Tool';
+    Item,
+} from './Item';
 import {
     Textarea,
 } from '../';
 import {
     useSyncedValue,
 } from '../../hooks';
-import styles from './NoteTool.module.css';
+import styles from './Note.module.css';
 
 export function Creator(
 ) {
@@ -21,18 +21,18 @@ export function Creator(
     );
 }
 
-export function NoteTool(
+export function Note(
     {
         id,
     },
 ) {
 
     return (
-        <Tool id={id}>
+        <Item id={id}>
             <div className={styles.container}>
                 <Textarea className={styles.textArea} />
                 <Creator />
             </div>
-        </Tool>
+        </Item>
     );
 }

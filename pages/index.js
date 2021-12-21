@@ -12,7 +12,6 @@ import {
 } from '../components';
 import {
     useUser,
-    useProviders,
 } from '../hooks';
 import styles from '../styles/Home.module.css';
 
@@ -25,24 +24,14 @@ export default function Home() {
     const {
         setUser,
     } = useUser();
-    const {
-        providers,
-    } = useProviders();
     const router = useRouter();
     const usernameInputRef = useRef();
-    const roomInputRef = useRef();
-
-    debugger;
-
-    const rooms = providers.get(WebrtcProvider);
 
     const handleClickEnter = (e) => {
 
         e.preventDefault();
 
         const username = usernameInputRef.current.value;
-        const room = roomInputRef.current.value;
-
         setUser(username);
 
         router.push('/coraljam');
@@ -63,11 +52,6 @@ export default function Home() {
                     <div className={styles.input}>
                         <div className={styles.label}>Username</div>
                         <input type="text" name="Name" ref={usernameInputRef} />
-                    </div>
-                    <div className={styles.input}>
-                        <div className={styles.label}>Room</div>
-                        <input type="text" name="Room" ref={roomInputRef} />
-                        <pre>{JSON.stringify(rooms, null, 2)}</pre>
                     </div>
                 </div>
                 <button onClick={handleClickEnter}>Enter</button>

@@ -1,18 +1,26 @@
 import {
-    Tool,
-} from './Tool';
+    Item,
+} from './Item';
 import {
     useSyncedValue,
 } from '../../hooks';
 import {
     FcApproval,
     FcHighPriority,
+    FcUp,
+    FcLeft,
+    FcDown,
+    FcRight,
 } from 'react-icons/fc';
-import styles from './Tool.module.css';
+import styles from './Sticker.module.css';
 
 const map = {
     fcApproval: FcApproval,
     fcHighPriority: FcHighPriority,
+    fcUp: FcUp,
+    fcLeft: FcLeft,
+    fcDown: FcDown,
+    fcRight: FcRight,
 };
 
 function Icon(
@@ -27,15 +35,15 @@ function Icon(
     );
 }
 
-export function StickerTool(
+export function Sticker(
     {
         id,
     },
 ) {
 
     return (
-        <Tool id={id}>
+        <Item id={id}>
             <Icon />
-        </Tool>
+        </Item>
     );
 }
