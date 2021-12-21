@@ -15,6 +15,7 @@ const configuration = {
     providers: new Map(),
 };
 
+// Turns off SSR (https://dev.to/apkoponen/how-to-disable-server-side-rendering-ssr-in-next-js-1563)
 function SafeHydrate(
     {
         children,
