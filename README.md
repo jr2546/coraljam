@@ -4,7 +4,11 @@
 
 CoralJam is a real-time collaborative whiteboarding application, with inspiration provided by [FigmaJam](https://www.figma.com/figjam/).
 
-### Local Installation
+## Public Demo
+
+This application is deployed to [http://coraljam.vercel.app](http://coraljam.vercel.app)
+
+## Local Installation
 
 These instructions will get you a copy of the project up and running on your local machine.
 

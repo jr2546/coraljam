@@ -25,7 +25,6 @@ export function Whiteboard() {
             {
                 objs.map(
                     ({ id, name, position }) => {
-                        debugger;
                         const Component = Items[name];
                         return (
                             <Component key={id} id={id} />

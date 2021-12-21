@@ -24,7 +24,6 @@ export default function CoralJam() {
     }
 
     const handleAddToHistory = (obj) => {
-        debugger;
     };
 
     return (

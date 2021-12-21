@@ -15,8 +15,6 @@ import {
 
 export const WhiteboardContext = React.createContext();
 
-let idx = 0;
-
 export function WhiteboardProvider(
     {
         children,
@@ -38,7 +36,7 @@ export function WhiteboardProvider(
         add: (name, meta = {}) => {
             store.objects.push(
                 {
-                    id: idx++,
+                    id: store.objects.length,
                     name,
                     position: [],
                     meta,
